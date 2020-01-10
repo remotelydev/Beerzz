@@ -24,6 +24,15 @@ const routes = [
     name: "contact",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Contact.vue")
+  },
+  {
+    path: "/beer/:id",
+    name: "beer",
+    component: () => import(/* webpackChunkName: "about" */ "../views/Beer.vue")
+  },
+  {
+    path: "/beer",
+    redirect: "/"
   }
 ];
 
