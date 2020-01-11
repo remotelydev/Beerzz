@@ -30,11 +30,14 @@
         :alt="beer.name"
       />
     </div>
-    <div v-else class="w-3/4">Loading...</div>
+    <Loader v-else />
   </div>
 </template>
+
 <script>
 import Sidebar from "@/components/Sidebar";
+import Loader from "@/components/Loader";
+
 export default {
   name: "Beer",
   data() {
@@ -57,7 +60,8 @@ export default {
   },
 
   components: {
-    Sidebar
+    Sidebar,
+    Loader
   }
 };
 </script>

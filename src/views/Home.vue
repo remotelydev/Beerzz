@@ -1,7 +1,10 @@
 <template>
   <div class="home flex flex-col lg:flex-row p-4 sm:p-8">
     <Sidebar class="lg:w-1/4 lg:mr-16" />
-    <div class="lg:w-3/4 flex flex-col sm:flex-row sm:flex-wrap lg:-ml-8">
+    <div
+      v-if="beers.length"
+      class="lg:w-3/4 flex flex-col sm:flex-row sm:flex-wrap lg:-ml-8"
+    >
       <router-link
         v-for="beer in beers"
         :key="beer.id"
@@ -10,18 +13,20 @@
         ><Card :item="beer"
       /></router-link>
     </div>
+    <Loader v-else />
   </div>
 </template>
 
 <script>
 import Card from "@/components/Card";
 import Sidebar from "@/components/Sidebar";
+import Loader from "@/components/Loader";
 
 export default {
   name: "home",
   data() {
     return {
-      beers: undefined
+      beers: []
     };
   },
   mounted() {
@@ -33,7 +38,8 @@ export default {
   },
   components: {
     Card,
-    Sidebar
+    Sidebar,
+    Loader
   }
 };
 </script>
