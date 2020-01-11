@@ -20,12 +20,10 @@
           type="button"
           class="bg-blue-600 text-white text-2xl py-2"
           @click="addToCart(beer)"
-        >
-          Add to cart
-        </button>
+        >Add to cart</button>
       </div>
       <img
-        class="h-64 sm:h-auto sm:w-1/2 object-contain object-top p-4"
+        class="beer-image h-64 sm:h-auto object-contain object-top p-4"
         :src="beer.image_url"
         :alt="beer.name"
       />
@@ -65,3 +63,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.beer-image {
+  max-height: 650px;
+}
+</style>
