@@ -1,7 +1,10 @@
 <template>
-  <div class="beer flex p-16">
-    <Sidebar class="w-1/4" />
-    <div v-if="beer" class="w-3/4 p-4 flex justify-between bg-white rounded">
+  <div class="beer flex flex-col lg:flex-row p-4 sm:p-8">
+    <Sidebar class="mb-4 lg:w-1/4 lg:mr-8" />
+    <div
+      v-if="beer"
+      class="lg:w-3/4 p-4 flex flex-col-reverse sm:flex-row justify-between bg-white rounded"
+    >
       <div class="beer-description flex flex-col">
         <h1 class="font-semibold text-4xl text-gray-800">{{ beer.name }}</h1>
         <p class="text-gray-600 mb-8">{{ beer.tagline }}</p>
@@ -22,7 +25,7 @@
         </button>
       </div>
       <img
-        class="w-1/2 object-contain p-4"
+        class="h-64 sm:h-auto sm:w-1/2 object-contain object-top p-4"
         :src="beer.image_url"
         :alt="beer.name"
       />

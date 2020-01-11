@@ -1,7 +1,9 @@
 <template>
-  <div class="about container flex my-16 items-start justify-center px-2">
+  <div
+    class="about container flex my-4 sm:my-16 items-start justify-center px-2"
+  >
     <div
-      class="px-16 py-8 sm:px-32 sm:py-16 rounded border bg-white text-center"
+      class="px-8 sm:px-16 py-8 sm:px-32 sm:py-16 rounded shadow bg-white text-center"
     >
       <div
         class="h-16 w-16 mx-auto flex items-center justify-center mb-12 rounded-full text-4xl text-white bg-blue-500"

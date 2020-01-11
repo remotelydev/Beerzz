@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 mr-16 self-start text-white bg-blue-600">
+  <div class="p-4 self-start text-white bg-blue-600">
     <h2 class="flex text-xl mb-4">
       <div
         class="h-8 w-8 flex items-center justify-center mr-3 rounded-full text-blue-600 bg-white"
@@ -29,7 +29,7 @@
           :key="`item-${item.id}`"
           class="bg-blue-800 m-1 p-1"
         >
-          <span class="font-bold text-green-500">{{ item.amount }}</span>
+          <span class="px-2 font-bold text-green-500">{{ item.amount }}</span>
           {{ item.name }}
         </div>
       </div>

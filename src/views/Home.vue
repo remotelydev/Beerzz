@@ -1,12 +1,12 @@
 <template>
-  <div class="home flex p-16">
-    <Sidebar class="w-1/4" />
-    <div class="w-3/4 flex flex-wrap -mx-8">
+  <div class="home flex flex-col lg:flex-row p-4 sm:p-8">
+    <Sidebar class="lg:w-1/4 lg:mr-16" />
+    <div class="lg:w-3/4 flex flex-col sm:flex-row sm:flex-wrap lg:-ml-8">
       <router-link
         v-for="beer in beers"
         :key="beer.id"
         :to="`/beer/${beer.id}`"
-        class="w-1/4 px-4"
+        class="sm:w-1/2 lg:w-1/3 xl:w-1/4 px-4 pt-4 lg:pt-0"
         ><Card :item="beer"
       /></router-link>
     </div>
